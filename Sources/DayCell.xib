@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G12b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="m27-NW-GPz">
-                        <rect key="frame" x="0.0" y="8.5" width="73" height="34"/>
+                        <rect key="frame" x="0.0" y="3.5" width="73" height="44"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="firstBaseline" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="FcK-Sc-nuG">
                                 <rect key="frame" x="17" y="0.0" width="39" height="24"/>
@@ -39,6 +40,12 @@
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="APRIL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FAF-y2-LkQ">
                                 <rect key="frame" x="25" y="24" width="23" height="10"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="8"/>
+                                <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Slots left: 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j6m-5m-7jT">
+                                <rect key="frame" x="14" y="34" width="45" height="10"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="8"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -67,6 +74,7 @@
             <connections>
                 <outlet property="dateLabel" destination="Qvg-q9-SfV" id="z5r-1I-qRB"/>
                 <outlet property="monthLabel" destination="FAF-y2-LkQ" id="qQr-kU-svO"/>
+                <outlet property="secondaryAccessoryLabel" destination="j6m-5m-7jT" id="8v5-q9-MKz"/>
                 <outlet property="selectorView" destination="dAR-fx-ZQV" id="O04-ux-ngb"/>
                 <outlet property="weekDayLabel" destination="5Ye-5o-RAT" id="BZE-a7-yFL"/>
             </connections>

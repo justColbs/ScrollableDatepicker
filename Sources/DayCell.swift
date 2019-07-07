@@ -12,6 +12,7 @@ open class DayCell: UICollectionViewCell {
     @IBOutlet public weak var weekDayLabel: UILabel!
     @IBOutlet public weak var monthLabel: UILabel!
     @IBOutlet public weak var selectorView: UIView!
+    @IBOutlet public weak var secondaryAccessoryLabel: UILabel!
 
     static var ClassName: String {
         return String(describing: self)
