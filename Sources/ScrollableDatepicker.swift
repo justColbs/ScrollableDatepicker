@@ -32,7 +32,7 @@ open class ScrollableDatepicker: LoadableFromXibView {
     // MARK: Configuration properties
 
     public weak var delegate: ScrollableDatepickerDelegate?
-    public var cellConfiguration: ((_ cell: DayCell, _ isWeekend: Bool, _ isSelected: Bool) -> Void)? {
+    public var cellConfiguration: ((_ cell: DayCell, _ isWeekend: Bool, _ isSelected: Bool, _ indexPath: IndexPath) -> Void)? {
         didSet {
             collectionView.reloadData()
         }
@@ -95,7 +95,7 @@ extension ScrollableDatepicker: UICollectionViewDataSource {
         cell.setup(date: date, style: configuration.calculateDayStyle(isWeekend: isWeekendDate, isSelected: isSelectedDate))
 
         if let configuration = cellConfiguration {
-            configuration(cell, isWeekendDate, isSelectedDate)
+            configuration(cell, isWeekendDate, isSelectedDate, indexPath)
         }
 
         return cell
