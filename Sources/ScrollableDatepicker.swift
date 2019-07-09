@@ -92,7 +92,7 @@ extension ScrollableDatepicker: UICollectionViewDataSource {
         let isWeekendDate = isWeekday(date: date)
         let isSelectedDate = isSelected(date: date)
 
-        cell.setup(date: date, style: configuration.calculateDayStyle(isWeekend: isWeekendDate, isSelected: isSelectedDate))
+        cell.setup(date: date, style: configuration.calculateDayStyle(isWeekend: isWeekendDate, isSelected: isSelectedDate), formatter: DateFormatter())
 
         if let configuration = cellConfiguration {
             configuration(cell, isWeekendDate, isSelectedDate, indexPath)

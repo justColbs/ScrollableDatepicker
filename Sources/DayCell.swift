@@ -21,9 +21,7 @@ open class DayCell: UICollectionViewCell {
 
     // MARK: - Setup
 
-    func setup(date: Date, style: DayStyleConfiguration) {
-        let formatter = DateFormatter()
-
+    func setup(date: Date, style: DayStyleConfiguration, formatter: DateFormatter) {
         formatter.dateFormat = "dd"
         dateLabel.text = formatter.string(from: date)
         dateLabel.font = style.dateTextFont ?? dateLabel.font
