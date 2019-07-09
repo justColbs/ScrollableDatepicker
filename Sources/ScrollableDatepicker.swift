@@ -52,6 +52,7 @@ open class ScrollableDatepicker: LoadableFromXibView {
             collectionView.reloadData()
         }
     }
+    public var dateFormatterForCells = DateFormatter()
 
 
     // MARK: Methods
@@ -92,7 +93,7 @@ extension ScrollableDatepicker: UICollectionViewDataSource {
         let isWeekendDate = isWeekday(date: date)
         let isSelectedDate = isSelected(date: date)
 
-        cell.setup(date: date, style: configuration.calculateDayStyle(isWeekend: isWeekendDate, isSelected: isSelectedDate), formatter: DateFormatter())
+        cell.setup(date: date, style: configuration.calculateDayStyle(isWeekend: isWeekendDate, isSelected: isSelectedDate), formatter: dateFormatterForCells)
 
         if let configuration = cellConfiguration {
             configuration(cell, isWeekendDate, isSelectedDate, indexPath)
