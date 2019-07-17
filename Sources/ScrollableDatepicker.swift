@@ -110,7 +110,9 @@ extension ScrollableDatepicker: UICollectionViewDataSource {
         guard let selectedDate = selectedDate else {
             return false
         }
-        return Calendar.current.isDate(date, inSameDayAs: selectedDate)
+        var c = Calendar.current
+        c.timeZone = TimeZone(identifier: "UTC")!
+        return c.isDate(date, inSameDayAs: selectedDate)
     }
 
 }
