@@ -7,7 +7,7 @@ import UIKit
 
 
 public protocol ScrollableDatepickerDelegate: class {
-    func datepicker(_ datepicker: ScrollableDatepicker, didSelectDate date: Date)
+    func datepicker(_ datepicker: ScrollableDatepicker, didSelectDate date: Date, index: IndexPath)
 }
 
 
@@ -127,7 +127,7 @@ extension ScrollableDatepicker: UICollectionViewDelegate {
 
         let date = dates[indexPath.row]
         selectedDate = date
-        delegate?.datepicker(self, didSelectDate: date)
+        delegate?.datepicker(self, didSelectDate: date, index: indexPath)
         scrollToSelectedDate(animated: true)
     }
 

@@ -68,7 +68,7 @@ class ViewController: UIViewController {
 
 extension ViewController: ScrollableDatepickerDelegate {
 
-    func datepicker(_ datepicker: ScrollableDatepicker, didSelectDate date: Date) {
+    func datepicker(_ datepicker: ScrollableDatepicker, didSelectDate date: Date, index: IndexPath) {
         showSelectedDate()
     }
     
